@@ -561,6 +561,11 @@ main.mentions {
     width: 90vw;
 }
 
+.main .company-name {
+    font-family: "Book Antiqua", "serif";
+    font-size: 1em;
+}
+
 main.mentions > section {
     width: 100%;
     max-width: 700px;
