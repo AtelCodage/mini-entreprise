@@ -1,0 +1,613 @@
+/* ------------------------------------------- POLICES D'ÉCRITURE ------------------------------------------ */
+@font-face {
+    font-family: "Book Antiqua";
+    src: url("../fonts/book-antiqua.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Calibri";
+    src: url("../fonts/calibri.ttf");
+    font-display: swap;
+}
+
+
+/* ----------------------------------------------- VARIABLES ----------------------------------------------- */
+:root {
+    --marron: rgba(105, 49, 26);
+    --vert: rgba(0, 61, 32);
+    --orange: rgba(212, 92, 19);
+    --near-white: rgb(230, 236, 233);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-family: "Calibri", sans-serif;
+}
+
+body {
+    background-color: var(--near-white);
+}
+
+
+/* -------------------------------- GESTION DU MENU SMARTPHONE / ORDINATEUR -------------------------------- */
+.nav {
+    color: var(--marron);
+    padding-top: 10px;
+}
+
+.nav__list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 4vw;
+    list-style: none;
+}
+
+.nav__toggle {
+    padding: 10px;
+}
+
+.nav__toggle i {
+    margin: 10px;
+    color: var(--marron);
+}
+
+.nav__ribbon {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.left {
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.left a {
+    display: flex;
+}
+
+.left, .nav__list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right {
+    display: flex;
+    gap: 2em;
+    justify-content: flex-end;
+}
+
+.nav__list i, .nav__toggle i, .left .logo {
+    font-size: 1.6rem;
+    height: 2rem;
+}
+
+.nav__list a div:first-child, .left a div:first-child {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.left a, .nav__list a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--marron);
+    padding: 10px;
+    border-radius: 50px;
+    font-family: "Schibsted Grotesk", sans-serif;
+}
+
+.left a > div:first-child, .nav__list a > div:first-child {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.underline, .active {
+    height: 60px;
+}
+
+.active img {
+    height: 30px;
+}
+
+.underline img {
+    visibility: hidden;
+}
+
+.nav__list a:hover img, .left a:hover img {
+    visibility: visible;
+}
+
+.underline img {
+    display: block;
+    height: 30px;
+}
+
+.separation {
+    max-height: 50px;
+    max-width: 95vw;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0;
+    margin: auto;
+    width: fit-content;
+}
+
+.sep1, .sep2 {
+    max-width: 50%;
+    max-height: 50px;
+}
+
+.sep2 {
+    transform: scaleX(-1);
+}
+
+/* Spécifique smartphone ----------------------------------------------------- */
+@media screen and (max-width: 767px) {
+    .nav {
+        padding: 0;
+    }
+
+    .nav__toggle {
+        display: flex;
+    }
+
+    .nav__ribbon {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    .left, .nav__list li {
+        width: 100%;
+        justify-content: stretch;
+        align-items: flex-start;
+    }
+
+    .left a, .nav__list a {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        width: 100%;
+    }
+
+    .left img {
+        background-color: var(--near-white);
+    }
+
+    .nav__ribbon .active, .nav__ribbon .underline  {
+        display: none;
+    }
+
+    .nav__ribbon a:active {
+        background-color: var(--marron);
+        color: var(--near-white);
+        border-radius: 0;
+    }
+
+    /* Affiche la liste du menu quand le focus est dans le nav */
+    .nav:focus-within .nav__ribbon {
+        display: flex;
+    }
+
+    .nav__toggle {
+        all: unset;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Spécifique ordinateur ----------------------------------------------------- */
+@media screen and (min-width: 768px) {
+    .nav__toggle {
+        display: none;
+    }
+    .nav__list {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* ------------------------------------------- MAIN ------------------------------------------ */
+.name {
+    font-family: "Book Antiqua", serif;
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+
+.name .vert {
+    color: var(--vert);
+}
+
+.name .orange {
+    color: var(--orange);
+}
+
+.name .marron {
+    color: var(--marron);
+}
+
+main p, main li {
+    line-height: 1.5em;
+}
+
+main h3 {
+    font-size: 4.2rem;
+}
+
+main h4 {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+main .logo__coul1 {
+    color: var(--marron);
+}
+
+main .logo__coul2 {
+    color: var(--vert);
+}
+
+main .logo__coul3 {
+    color: var(--orange);
+}
+
+main img {
+    display: block;
+    border-radius: 15px;
+    text-align: center;
+}
+
+main ul {
+    list-style-position: inside;
+}
+
+/* Main - Accueil ------------------------------------------ */
+.accueil {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3vw;
+    width: 100%;
+    align-items: center;
+    margin: 40px 0;
+    background: url("../images/bois.jpg") center;
+    background-size: 100%;
+    padding: 20px;
+}
+
+.accueil > * {
+    width: 100%;
+    min-width: 300px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+    border-radius: 15px;
+    margin: 30px auto;
+    background-color: var(--near-white);
+}
+
+.accueil > div {
+    padding: 15px;
+}
+
+.name-slogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.accueil img {
+    display: block;
+    max-width: 600px;
+}
+
+.accueil .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.accueil .logo {
+    max-width: 350px;
+}
+
+/* Main - A Propos ------------------------------------------ */
+.a-propos {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+    margin: auto;
+    font-size: 1rem;
+}
+
+.organigramme {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 3vw;
+}
+
+.organigramme section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 700px;
+    min-width: 320px;
+    width: 30%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
+
+.a-propos h2 {
+    font-size: 3rem;
+    color: var(--marron);
+    font-family: "Schibsted Grotesk", sans-serif;
+    margin: 4vw auto;
+    text-align: center;
+}
+
+.a-propos h3{
+    padding: 5px;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    background-color: var(--vert);
+    color: var(--near-white);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.a-propos section > div {
+    padding: 0 15px 15px 15px;
+}
+
+.a-propos p {
+    margin: 0 5px;
+    font-size: 1rem;
+}
+
+.a-propos p span {
+    font-weight: bold;
+}
+
+/* Main - Contact ------------------------------------------ */
+main.contact {
+    display: block;
+    min-width: 320px;
+    width: 50%;
+    max-width: 800px;
+    line-height: 1.5em;
+    margin: 80px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+}
+
+.contact h3 {
+    font-size: 1.8rem;
+    line-height: 1.2em; 
+}
+
+.contact address {
+    font-style: normal;
+}
+
+.contact a {
+    color: var(--marron);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 8px;
+    border-radius: 15px;
+    width: fit-content;
+}
+
+.contact a:hover {
+    background-color: var(--orange);
+    color: var(--near-white);
+}
+
+.contact a:active {
+    background-color: var(--vert);
+    color: var(--near-white);
+}
+
+.details h2 {
+    font-family: "Schibsted Grotesk", sans-serif;
+    font-size: 1.3rem;
+}
+
+.contact .reseaux {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: auto;
+    width: fit-content;
+}
+
+.contact .reseaux a {
+    padding: 15px;
+    font-size: 2rem;
+}
+
+/* Main - Produit ------------------------------------------ */
+main.produit {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 40px 3vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.produit > * {
+    min-width: 300px;
+    max-width: 600px;
+    width: 100%;
+    margin: 1vw;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.produit > div {
+    padding: 15px;
+}
+
+.produit h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.produit h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+
+/* ------------------------------------------- FOOTER ------------------------------------------ */
+footer {
+    display: block;
+    color: var(--near-white);
+    background-color: var(--vert);
+    padding: 20px;
+    padding-bottom: 50px;
+}
+
+footer > section {
+    width: fit-content;
+    margin: 30px auto;
+}
+
+footer > section h2 {
+    font-family: "Schibsted Grotesk", sans-serif;
+    font-size: 1.5rem;
+    margin: 0 0 20px;
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.partenaires__list, .reseaux__list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.partenaires__list > li, .reseaux__list li {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    align-items: center;
+}
+
+footer img {
+    width: 30px;
+}
+
+footer a {
+    color: var(--near-white);
+    text-decoration: none;
+    padding: 10px;
+    border: 2px solid transparent;
+}
+
+footer i {
+    font-size: 1.5rem;
+}
+
+footer a:hover {
+    border-color: var(--near-white);
+    border-radius: 10px;
+}
+
+footer a:active {
+    background-color: var(--near-white);
+    border-color: var(--near-white);
+    color: var(--vert);
+}
+
+/* ------------------------------------------- MENTIONS LEGALES ------------------------------------------ */
+main.mentions {
+    display: block;
+    margin: 30px auto;
+    width: 90vw;
+}
+
+main.mentions > section {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+}
+
+.mentions h1 {
+    color: var(--marron);
+    text-align: center;
+    font-family: "Schibsted Grotesk", sans-serif;
+    margin: auto;
+}
+
+.mentions h2 {
+    color: var(--marron);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--marron);
+    font-family: "Schibsted Grotesk", sans-serif;
+}
+
+.mentions address {
+    font-style: normal;
+    margin-left: 20px;
+}
+
+.mentions * {
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+.mentions a {
+    text-decoration: none;
+    color: var(--marron);
+    padding: 3px 5px;
+}
+
+.mentions a:hover {
+    color: var(--orange);
+}
+
+.mentions a:active {
+    color: var(--near-white);
+    background-color: var(--marron);
+}

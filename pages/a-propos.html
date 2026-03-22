@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>À propos</title>
+</head>
+
+<body>
+    
+    <!-- Contenu du header : navigation ------------------------------------------------------------->
+    <header>
+        <nav class="nav">
+
+            <!-- Bouton Menu (visible sur téléphone ; caché sur ordi) -->
+            <button class="nav__toggle" type="button" aria-label="Ouvrir le menu">
+                <i class="bi bi-list" aria-hidden="true"></i>
+            </button>
+
+            <!-- Liste du menu (affiché/caché sur téléphone ; visible sur ordi) -->
+            <ul class="nav__ribbon">
+                <li class="left">
+                    <a href="../index.html">
+                        <div>                            
+                            <img class="logo" src="../images/logo.png" alt="Le logo de la mini-entreprise">
+                            <span>Accueil</span>
+                        </div>
+                        <div class="underline"><img src="../images/soulignage-mini.png" alt="souligné"></div>
+                    </a>
+                </li>
+
+                <li class="right">
+                    <ul class="nav__list">
+                        <li>
+                            <a href="../pages/produit.html">
+                                <div>
+                                    <i class="bi bi-box"></i>
+                                    <span>Produit</span>
+                                </div>
+                                <div class="underline"><img src="../images/soulignage-mini.png" alt="souligné"></div>
+                            </a></li>
+                        <li>
+                            <a href="../pages/a-propos.html">
+                                <div>
+                                    <i class="bi bi-info-circle"></i>
+                                    <span>À propos</span>
+                                </div>                
+                                <div class="active"><img src="../images/soulignage-mini.png" alt="souligné"></div>             
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../pages/contact.html">
+                                <div>
+                                    <i class="bi bi-telephone"></i>
+                                    <span>Nous contacter</span>
+                                </div>
+                                <div class="underline"><img src="../images/soulignage-mini.png" alt="souligné"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+
+        <div class="separation">
+            <img class="sep1" src="../images/separation.png" alt="">
+            <img class="sep2" src="../images/separation.png" alt="">
+        </div>
+    </header>
+    
+    <!-- Contenu du main : contenu général de la page, organisé par sections ------------------------>
+    <main class="a-propos">
+        <h2>
+            L'équipe
+            <span class="name">
+                <span class="vert">Clic</span><span class="orange">&</span><span class="marron">Croc</span>
+            </span>
+        </h2>
+        <section class="organigramme">
+            <section>
+                <h3>Direction</h3>
+                <div>
+                    <p><span class="gras">PDG : </span>Juline&nbsp;Greiner</p>
+                    <p><span class="gras">Directrice opérationnelle : </span>Liana&nbsp;Sauvêtre</p>
+                </div>
+            </section>
+            <section>
+                <h3>Service administratif</h3>
+                <div>
+                    <p><span class="gras">Responsable : </span> Loan&nbsp;Roy</p>
+                    <p>Augustin&nbsp;Viet</p>
+                    <p>Antoine&nbsp;Brandon</p>
+                </div>
+            </section>
+            <section>
+                <h3>Service Ressources humaines</h3>
+                <div>
+                    <p><span class="gras">Responsable : </span>Louis&nbsp;Richard-Ranger</p>
+                    <p>Estelle&nbsp;Marnais</p>
+                </div>
+            </section>
+            <section>
+                <h3>Service Financier</h3>
+                <div>
+                    <p><span class="gras">Responsable : </span>Mélanie&nbsp;Miguéis&nbsp;Adriano</p>
+                    <p>Lisandra&nbsp;Gangneux</p>
+                </div>
+            </section>
+            <section>
+                <h3>Service Production</h3>
+                <div>
+                    <p><span class="gras">Responsable : </span>Camille&nbsp;Lohr</p>
+                    <p>Léa&nbsp;Crestani</p>
+                    <p>Juliette&nbsp;Rey</p>
+                    <p>Hugo&nbsp;Lodin</p>
+                    <p>Charlotte&nbsp;Bazir</p>
+                </div>
+            </section>
+            <section>
+                <h3>Service Marketing et Communication</h3>
+                <div>
+                    <p><span class="gras">Responsable : </span>Baptiste&nbsp;Bochereau</p>
+                    <p>Manon&nbsp;Chalain</p>
+                    <p>Eloïse&nbsp;Villeneuve</p>
+                </div>
+            </section>
+        </section>
+    </main>
+    
+    <!-- Contenu du footer : bandeau de mentions légales -------------------------------------------->
+    <footer>
+        <section class="partenaires">
+            <h2>Nos partenaires</h2>
+            <ul class="partenaires__list">
+                <li>
+                    <img src="../images/logo-atelier.svg" alt="">
+                    <span>Atelier Codage</span>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="reseaux">
+            <h2>Retrouvez-nous !</h2>
+            <ul class="reseaux__list">
+                <li>
+                    <a href="https://www.instagram.com/mini_entreprise_alcuin/" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/Mini.Alcuin" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        
+        <section>
+            <a class="mentions" href="../pages/mentions-legales.html" target="_blank">Mentions légales</a>
+        </section>
+    </footer>
+</body>
+</html>
