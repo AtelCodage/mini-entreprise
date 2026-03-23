@@ -331,6 +331,26 @@ main ul {
     max-width: 80%;
 }
 
+.animation {
+  text-align: center;
+}
+
+.animation span {
+  opacity: 0;
+  filter: blur(6px);
+  transform: translateX(20px);
+  animation: reveal 1s forwards;
+  animation-delay: calc(var(--i) * 0.2s);
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+}
+
 /* Main - A Propos ------------------------------------------ */
 .a-propos {
     display: flex;
@@ -485,6 +505,12 @@ main.produit {
 .produit h3 {
     font-size: 1.5em;
     margin-top: 20px;
+}
+
+.produit h4 {
+    text-align: center;
+    font-size: 1.2em;
+
 }
 
 
