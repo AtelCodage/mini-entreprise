@@ -18,11 +18,13 @@
     <!-- Contenu du header : navigation ------------------------------------------------------------->
     <header>
         <nav class="nav">
+                
+            <!-- "Bouton" Menu (visible sur téléphone ; caché sur ordi) -->
+            <input class="nav__checkbox" id="nav__checkbox" type="checkbox">
 
-            <!-- Bouton Menu (visible sur téléphone ; caché sur ordi) -->
-            <button class="nav__toggle" type="button" aria-label="Ouvrir le menu">
+            <label for="nav__checkbox" class="nav__toggle"  aria-label="Ouvrir le menu">
                 <i class="bi bi-list" aria-hidden="true"></i>
-            </button>
+            </label>
 
             <!-- Liste du menu (affiché/caché sur téléphone ; visible sur ordi) -->
             <ul class="nav__ribbon">
@@ -65,7 +67,8 @@
                             </a>
                         </li>
                     </ul>
-                </div>
+                </li>
+            </ul>
         </nav>
 
         <div class="separation">

@@ -49,12 +49,18 @@ body {
     list-style: none;
 }
 
+.nav__checkbox {
+    display: none;
+}
+
 .nav__toggle {
     padding: 10px;
+    list-style: none;
+    border: none;
+    cursor: pointer;
 }
 
 .nav__toggle i {
-    margin: 10px;
     color: var(--marron);
 }
 
@@ -165,6 +171,9 @@ body {
 
     .nav__toggle {
         display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        cursor: pointer;
     }
 
     .nav__ribbon {
@@ -174,6 +183,10 @@ body {
         gap: 0;
         width: 100%;
         padding: 0;
+    }
+
+    .nav__checkbox:checked ~.nav__ribbon {
+        display: flex;
     }
 
     .left, .nav__list li {
@@ -207,19 +220,6 @@ body {
         color: var(--near-white);
         border-radius: 0;
     }
-
-    /* Affiche la liste du menu quand le focus est dans le nav */
-    .nav:focus-within .nav__ribbon {
-        display: flex;
-    }
-
-    .nav__toggle {
-        all: unset;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
 }
 
 /* Spécifique ordinateur ----------------------------------------------------- */
@@ -227,6 +227,22 @@ body {
     .nav__toggle {
         display: none;
     }
+
+    .nav__ribbon {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+    }
+
+    .right {
+        display: flex;
+        gap: 2em;
+        justify-content: flex-end;
+        flex-direction: row;
+    }
+
     .nav__list {
         display: flex;
         flex-direction: row;
