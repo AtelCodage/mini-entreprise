@@ -529,6 +529,9 @@ main.produit {
 
 }
 
+.produit .details p {
+    text-align: justify;
+}
 
 /* ------------------------------------------- FOOTER ------------------------------------------ */
 footer {
