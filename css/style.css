@@ -529,7 +529,7 @@ main.produit {
 
 }
 
-.produit .details p {
+p.description {
     text-align: justify;
 }
 
